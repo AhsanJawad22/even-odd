@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Find Even And Odd</h2>
+      <form class="form" onsubmit="calculate();return false;">
+        <label for="number">Number</label>
+  
+        <input
+          class="input"
+          type="number"
+          min="1"
+          required
+          id="number"
+          placeholder="Enter your number"
+        />
+        <button class="button" type="submit">click</button>
+        <h1 id="result"></h1>
+      </form>
+    </div>
+   
+    <script>
+      function calculate() {
+        let number = document.querySelector("#number").value;
+        number = Number(number);
+
+        let result = number % 2;
+
+        document.querySelector(
+          "#result"
+        ).innerHTML = ` If your remandr is 0,Its Even,If your remandr is 1,Its Odd ${result}`;
+      }
+    </script>
+  </body>
+</html>
